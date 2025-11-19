@@ -1,30 +1,30 @@
-import { CuratingType } from "@services/types";
-import classNames from "classnames/bind";
-import styles from "./CuratingsContent.module.scss";
-import Divider from "@libs/shared/layout/Divider";
-import Curating from "./Curating";
-import Pagination from "@libs/shared/pagination/Pagination";
-import { Fragment } from "react";
-import EmptyData from "@libs/shared/empty-data/EmptyData";
+import { CuratingType } from '@services/types'
+import classNames from 'classnames/bind'
+import styles from './CuratingsContent.module.scss'
+import Divider from '@libs/shared/layout/Divider'
+import Curating from './Curating'
+import Pagination from '@libs/shared/pagination/Pagination'
+import { Fragment } from 'react'
+import EmptyData from '@libs/shared/empty-data/EmptyData'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 type CuratingsContentProps = {
   curatings: CuratingType[];
   currentPage: number;
   totalPages: number;
-};
+}
 
 const CuratingsContent = ({
   curatings,
   currentPage,
   totalPages,
 }: CuratingsContentProps) => {
-  const curatingsLength = Array.isArray(curatings) ? curatings.length : 0;
+  const curatingsLength = Array.isArray(curatings) ? curatings.length : 0
 
   return (
     <>
-      <div className={cx("contentContainer")}>
+      <div className={cx('contentContainer')}>
         <Divider marginBlock="0" color="black" />
         {Array.isArray(curatings) &&
           curatings.map((curating, idx) => (
@@ -36,14 +36,14 @@ const CuratingsContent = ({
             </Fragment>
           ))}
         {curatingsLength === 0 && (
-          <div className={cx("emptyDataWrapper")}>
+          <div className={cx('emptyDataWrapper')}>
             <EmptyData text="아직 큐레이션이 없어요" />
           </div>
         )}
         <Divider marginBlock="0" color="black" />
       </div>
       {Array.isArray(curatings) && curatings.length > 0 && (
-        <div className={cx("paginationWrapper")}>
+        <div className={cx('paginationWrapper')}>
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
@@ -52,7 +52,7 @@ const CuratingsContent = ({
         </div>
       )}
     </>
-  );
-};
+  )
+}
 
-export default CuratingsContent;
+export default CuratingsContent
