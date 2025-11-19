@@ -10,15 +10,18 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "3000",
+        protocol: "https",
+        hostname: "nb06-howdoilook-team2.onrender.com",
       },
       {
-        protocol: "https",
-        hostname: "sprint-be-project.s3.ap-northeast-2.amazonaws.com",
+        protocol: "http",
+        hostname: "localhost",
+      },
+      {
+        protocol: "http",
+        hostname: "nb06-howdoilook-team2.onrender.com",
       },
     ],
-    domains: ["example.com"],
+    domains: ["nb06-howdoilook-team2.com"],
   },
 };
