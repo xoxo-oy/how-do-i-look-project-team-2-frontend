@@ -22,7 +22,7 @@ const nextConfig = {
         hostname: "nb06-howdoilook-team2.onrender.com",
       },
     ],
-    domains: ["nb06-howdoilook-team2.com"],
+    domains: ["example.com"],
   },
   webpack: (config) => {
     // tsconfig.json alias와 동일하게 webpack alias 지정
